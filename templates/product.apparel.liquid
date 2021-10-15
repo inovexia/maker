@@ -1,5 +1,54 @@
 <style>
+  button.shopify-payment-button__button.shopify-payment-button__button--unbranded, .product-form--smart-payment-buttons{
+    display:none !important;
+  }
+
+  .page--reyal-e-gift-card #shopify-section-framework--page-review {
+	display: none;
+}
+.page--reyal-e-gift-card .organic-ingredients {
+	display: none;
+}
+.page--reyal-e-gift-card .small-container .organic-ingredients-row {
+	padding-bottom: 50px;
+}
+.page--reyal-e-gift-card .accordian-mob ul li:last-child {
+    display: none;
+}
+.page--reyal-e-gift-card .pdt-star-rating.grid-view-item{
+  display: none;
+}
+.page--reyal-e-gift-card .layer-img-wrp h1 {
+	padding-bottom: 20px;
+}
+.page--reyal-e-gift-card #shopify-section-framework--page-mobile-accordian-apparal {
+	display: none;
+}
+.spr-summary-actions-newreview {
+    font-size: 24px !important;
+    text-decoration: underline !important;
+}
   @media (min-width: 0) {
+.page--reyal-gym-beanie .accordian-mob ul li:first-child,
+.page--classic-reyal-gym-hat .accordian-mob ul li:first-child,
+.page--classic-reyal-snap-back .accordian-mob ul li:first-child,
+.page--classic-reyal-gym-high-sock .accordian-mob ul li:first-child,
+.page--classic-reyal-shaker .accordian-mob ul li:first-child,
+.page--reyal-e-gift-card .accordian-mob ul li:first-child {
+	display: none;
+}
+.page--reyal-e-gift-card #openSizeGuide {
+	display: none;
+}
+.page--reyal-e-gift-card .product-variants span{
+  display: none;
+}
+    #openSizeGuide {
+	display: none;
+}
+    .comfort-section h3 {
+	text-transform: uppercase;
+}
     .spr-review-header-title {
 	margin: 25px 0px;
 	font-weight: 600;
@@ -7,9 +56,6 @@
     .spr-starratings.spr-review-header-starratings {
 	margin-bottom: 0;
 }
-     .product-form--smart-payment-buttons{
-      display: none;
-    }
     .comfort-bg-img video {
 	height: auto;
 	width: 100%;
@@ -39,10 +85,7 @@
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-}
-     .spr-summary-actions-newreview {
-	display: none !important;
-}
+} 
 .spr-review-reportreview {
 	display: none !important;
 }
@@ -219,9 +262,6 @@
     .page--apparel {
       font-family: 'Helvetica Neue', sans-serif !important;
     }
-    .layer-img-wrp {
-      margin: 65px auto;
-    }
     .small-container {
       max-width: 1212px;
       padding-left: 15px;
@@ -315,23 +355,19 @@
     .pdt-star-rating {
       margin: 13px auto 27px;
     }
-    .pdt-star-rating .spr-badge .spr-starrating .spr-icon::before {
-      font-size: 23px;
-    }
     .pdt-star-rating .spr-badge-caption {
       font-weight: 500;
       font-size: 19px;
       line-height: 24px;
       letter-spacing: -0.01em;
       margin-left: 14px;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-family: aktiv-grotesk, sans-serif;
     }
     .layer-img-wrp h1 {
       font-size: 34px;
       line-height: 45px;
       margin: 0;
-      font-weight: 700;
-      font-family: 'Helvetica Neue', sans-serif;
+      font-weight: bold;
     }
     .layer-img-wrp h3 {
       font-weight: bold;
@@ -428,6 +464,7 @@
       text-align: center;
       padding: 0;
       position: relative;
+      margin-bottom: 7px;
     }
     #single-product-form .radios--container .radios--main label {
       width: 100%;
@@ -482,9 +519,12 @@
     .dash-icon {
       padding: 0px 5px;
     }
-    #single-product-form .product-form--add-to-cart .product-form--price {
+    #single-product-form .product-form--add-to-cart {
       font-size: 20px;
       line-height: 24px;
+    }
+    #single-product-form .product-form--add-to-cart div, #single-product-form .product-form--add-to-cart span {
+      font-size: inherit;
     }
     .pdt-variant .box span {
       position: absolute;
@@ -769,9 +809,25 @@
       overflow-x: hidden;
     }
   }
+
   @media (min-width: 576px) {
+    
   }
+  @media only screen and (min-width:0px) and (max-width: 767px) {
+    .product-form--add-to-cart {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99999;
+}
+  }
+  
   @media (min-width: 768px) {
+    #openSizeGuide {
+	display: block;
+}
     #shopify-section-framework--page-review {
       margin: 0px -48px;
     }
@@ -1019,14 +1075,67 @@
       margin-top: 0;
     }
   }
-
-
+  @media (max-width: 990px) {
+    .template--product .layout--main-content {
+      padding: 0;
+    }
+    .product-img-slider {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+    .layer-content {
+      margin-top: 35px;
+    }
+    .layer-img-wrp h1 {
+      font-size: 34px;
+      line-height: 109%;
+      color: #000;
+    }
+    .pdt-star-rating {
+      margin: 8px 0;
+    }
+    .pdt-star-rating .spr-badge-caption {
+      color: #000;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 185%;
+      letter-spacing: -0.01em;
+    }
+    .pdt-star-rating .spr-badge .spr-starrating .spr-icon {
+      font-size: 12px;
+    }
+    .description p {
+      color: #000;
+    }
+    #single-product-form .product-form--button-container .product-form--add-to-cart {
+      font-size: 18px;
+      line-height: 133%;
+      padding: 23px 68px;
+      letter-spacing: 0.02em;
+    }
+    .review {
+      padding: 20px 0;
+    }
+    .review a, .membership a {
+      margin-top: 20px;
+    }
+    #shopify-section-framework--page-sup-organic-ingredients, #shopify-section-framework--page-membership {
+      display: none;
+    }
+    .swiper-pagination {
+      display: none;
+    }
+    .product-form--root {
+      padding-bottom: 30px;
+    }
+  }
 </style>
 
 {% section 'product-apparel' %} 
 {% section 'framework--page-apparel-wearing' %}
-{% section 'framework--page-review' %} {% section
-'framework--product-recommendations' %}
+{% section 'framework--page-review' %}
+{% section 'framework--page-mobile-accordian-apparal' %}
+{% section 'framework--product-recommendations' %}
 
 
 

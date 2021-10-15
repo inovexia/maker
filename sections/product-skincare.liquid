@@ -42,7 +42,7 @@
             <div class="swiper-wrapper">
               {% for image in product.images %}
               <div class="swiper-slide">
-                <img src="{{ image.src | product_img_url: '512x512', crop: 'center' }}" alt="{{image.alt}}" />
+                <img src="{{ image.src | product_img_url: '1024x1024', crop: 'center',  scale: 3 }}" alt="{{image.alt}}" />
               </div>
     		  {% endfor %}
             </div>
@@ -79,7 +79,7 @@
             
           </div>
          
-          <h3><span id="additivesIngreditnts">{% if product.metafields.products.additives_ingredients_title != blank %}{{product.metafields.products.additives_ingredients_title}}{% else %}ADDITIVES & INGREDIENTS{% endif %}</span></h3>
+          <h3 class="additives-title-popup"><span id="additivesIngreditnts">{% if product.metafields.products.additives_ingredients_title != blank %}{{product.metafields.products.additives_ingredients_title}}{% else %}ADDITIVES & INGREDIENTS{% endif %}</span></h3>
           
           {%
             render "framework--product--skincare--form",

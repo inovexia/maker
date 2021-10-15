@@ -232,11 +232,10 @@
       font-weight: normal;
       font-size: 17px;
       line-height: 24px;
-      margin-bottom: 100px;
+      margin-bottom: 144px;
     }
     .full-transp-container a,
-    .membership a,
-    .review a {
+    .membership a{
       font-style: normal;
       font-weight: bold;
       font-size: 17px !important;
@@ -245,7 +244,6 @@
       display: inline-block;
       text-decoration: underline;
     }
-    .review a,
     .membership a {
       margin-top: 100px;
     }
@@ -401,6 +399,7 @@
     }
     .product-img-slider {
       position: relative;
+      height: 500px
     }
     .product-img-slider .swiper-container {
       width: 100%;
@@ -494,7 +493,7 @@
     }
     .ingredient-box-one {
       width: 100%;
-      border: 1px solid #000;
+	    border: 0;
     }
 
     .ingredient-box-one ul li {
@@ -558,6 +557,12 @@
     .membership-wrp {
       margin: 0 -48px;
     }
+
+    .product-img-slider {
+      position: relative;
+      height: 694px;
+    }
+      
     .real-ingredient-text h3 {
       margin-top: 0;
       line-height: 32px !important;
@@ -696,6 +701,11 @@
     .membership .col-5 {
       flex-basis: 45%;
       margin-top: 0;
+    }
+  }
+  @media (max-width: 720px) {
+    .description {
+      margin-top: 25px
     }
   }
 </style>

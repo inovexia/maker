@@ -1,0 +1,313 @@
+
+<section class="organic-ingredients">
+  <div class="small-container">
+    {% if product.metafields.ingredient.section_above_title != blank %}
+    <h2>{{ product.metafields.ingredient.section_above_title }}</h2>
+    {% else %}
+    <h2>A FIVE IN ONE HIGH-PERFORMANCE PROTEIN SUPPLEMENT</h2>
+    {% endif %}
+    <div class="row organic-ingredients-row">
+      <div class="col-3">
+        <div class="organic-img">
+          <img
+            src="{{
+              product.metafields.ingredient.section_col1_image
+                | img_url: 'master'
+            }}"
+            alt="organic 1"
+          />
+        </div>
+        <h3>
+          {% if product.metafields.ingredient.section_col1_text_1 != blank %}
+          {{ product.metafields.ingredient.section_col1_text_1 }}
+          {%else%}
+          No Added Fillers
+          {%endif%}
+        </h3>
+        <p>
+          {% if product.metafields.ingredient.section_col1_text_2 != blank %}
+          {{ product.metafields.ingredient.section_col1_text_2 }}
+          {%else%}
+          Les 3 niveaux qui composent le boîtier donnent à la montre une silhouette fine et élancée. Chaque
+          {%endif%}
+        </p>
+      </div>
+      <div class="col-3">
+        <div class="organic-img">
+          <img
+            src="{{
+              product.metafields.ingredient.section_col2_image
+                | img_url: 'master'
+            }}"
+            alt="organic 2"
+          />
+        </div>
+        <h3>
+          {% if product.metafields.ingredient.section_col2_text_1 != blank %}
+          {{ product.metafields.ingredient.section_col2_text_1 }}
+          {%else%}
+          100% Dairy Free
+          {%endif%}
+        </h3>
+        <p>
+          {% if product.metafields.ingredient.section_col2_text_2 != blank %}
+          {{ product.metafields.ingredient.section_col2_text_2 }}
+          {%else%}
+          Les 3 niveaux qui composent le boîtier donnent à la montre une silhouette fine et élancée. Chaque
+          {%endif%}
+        </p>
+      </div>
+      <div class="col-3">
+        <div class="organic-img">
+          <img
+            src="{{
+              product.metafields.ingredient.section_col3_image
+                | img_url: 'master'
+            }}"
+            alt="organic 3"
+          />
+        </div>
+        <h3>
+          {% if product.metafields.ingredient.section_col3_text_1 != blank %}
+          {{ product.metafields.ingredient.section_col3_text_1 }}
+          {%else%}
+          Easy Mixing
+          {%endif%}
+        </h3>
+        <p>
+          {% if product.metafields.ingredient.section_col3_text_2 != blank %}
+          {{ product.metafields.ingredient.section_col3_text_2 }}
+          {%else%}
+          Les 3 niveaux qui composent le boîtier donnent à la montre une silhouette fine et élancée. Chaque
+          {%endif%}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid full-transp-container">
+    <div class="row">
+      <div class="col-4 real-ingredient-text">
+        <h3>
+          {% if product.metafields.ingredient.section_below_left_title != blank %}
+          {{ product.metafields.ingredient.section_below_left_title }}
+          {%else%}
+          REAL INGREDIENTS. FULL TRANSPARENCY.
+          {%endif%}
+        </h3>
+        <p>
+          {% if product.metafields.ingredient.section_below_left_description != blank %}
+          {{ product.metafields.ingredient.section_below_left_description }}
+          {%else%}
+
+          {%endif%}
+        </p>
+        <!-- <a id="learn-more" href="#">LEARN MORE</a> -->
+      </div>
+      <div class="col-8 real-ingredient-img">
+        <div class="row">
+          <div class="col-7">
+            <div class="ingredient-box-one">
+              <table>
+                <tr><th colspan="2">{% if product.metafields.amount.per_scoop != blank %}
+                  Amount Per Packet ({{product.metafields.amount.per_scoop}})
+                  {%else%}
+                  AMOUNT PER SCOOP (NA)
+                  {%endif%}</th></tr>
+                  <tr>
+                    <td>EFA Omega & Vitamin E Complex</td>
+                    <td>{% if product.metafields.calories.value != blank %}
+                    {{product.metafields.calories.value}}
+                    {%else%}
+                    NA
+                    {%endif%}</td>
+                  </tr>
+                  <tr>
+                    <td>Ashwagandha</td>
+                    <td>{% if product.metafields.fat.value != blank %}
+                    {{product.metafields.fat.value}}
+                    {%else%}
+                    NA
+                    {%endif%}</td>
+                  </tr>
+                   <tr>
+                    <td>High-Density Collagen</td>
+                    <td> {% if product.metafields.protein.value != blank %}
+                    {{product.metafields.protein.value}}
+                    {%else%}
+                    NA
+                    {%endif%}</td>
+                  </tr>
+                   <tr>
+                    <td>Functional Mushroom Complex</td>
+                    <td> {% if product.metafields.sugars.value != blank %}
+                    {{product.metafields.sugars.value}}
+                    {%else%}
+                    NA
+                    {%endif%}</td>
+                  </tr>
+                  <tr>
+                    <td>Phytoceramides Complex</td>
+                    <td> {% if product.metafields.carbohydrates.value != blank %}
+                    {{product.metafields.carbohydrates.value}}
+                    {%else%}
+                    NA
+                    {%endif%}</td>
+                  </tr>
+                  <tr>
+                    <td>Servings</td>
+                    <td>{% if product.metafields.sodium.value != blank %}
+                    {{product.metafields.sodium.value}}
+                    {%else%}
+                    NA
+                    {%endif%}</td>
+                  </tr>
+              </table>
+             
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="ingredient-box">
+              {% if product.metafields.ingredient.list != blank %}
+              {{ product.metafields.ingredient.list }}
+              {%else%}
+
+              <table>
+                <tr>
+                  <th>INGREDIENTS LIST</th>
+                </tr>
+                <tr><td>Vitamin C
+</td></tr>
+                <tr><td>Vitamin B12
+</td></tr>
+                <tr><td>Reishi</td></tr>
+                <tr><td>Turkey Tail
+</td></tr>
+                <tr><td>Maitake</td></tr>
+                <tr><td><span id="additivesIngreditnts2">VIEW MORE INGREDIENTS</span></td></tr>
+              </table>
+             
+              {%endif%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="additivesModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="additives-ingredients">
+      {% if product.metafields.products.additives_ingredients != blank %}
+      {{product.metafields.products.additives_ingredients}}
+      {% else %}
+      Not Available
+      {% endif %}
+    </div>
+  </div>
+
+</div>
+<script>
+$(document).ready(function(){
+  $("#learn-more").click(function(){
+        $(".size-modal").modal({
+            backdrop: 'static',
+            keyboard: false
+        });
+    });
+  $('.close-size-modal').click(function(){
+    $('.size-modal').fadeOut();
+  });
+ 
+  var learnMore = document.getElementById('learn-more');
+  learnMore.onclick = function (e) {
+    e.preventDefault();
+    sizeBtn.style.display = 'block';
+  };
+
+});
+</script>
+
+{% schema %}
+{
+  "name": "Organic Ingredients",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero Center Content"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_title",
+      "label": "Center Organic Ingredient Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_title1",
+      "label": "Center Organic Ingredient Title"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_desc1",
+      "label": "Center Organic Ingredient Desc1"
+    },
+    {
+      "type": "image_picker",
+      "id": "center_image",
+      "label": "Center Image"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_title2",
+      "label": "Center Organic Ingredient Title"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_desc2",
+      "label": "Center Organic Ingredient Desc2"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_title3",
+      "label": "Center Organic Ingredient Title"
+    },
+    {
+      "type": "text",
+      "id": "center_organic_ingredient_desc3",
+      "label": "Center Organic Ingredient Desc3"
+    },
+    {
+      "type": "text",
+      "id": "center_real_ingredient_title",
+      "label": "Center Real Ingredient Title"
+    },
+    {
+      "type": "text",
+      "id": "center_real_ingredient_description",
+      "label": "Center Real Ingredient Description"
+    },
+    {
+      "type": "text",
+      "id": "center_real_ingredient_button",
+      "label": "Center Real Ingredient Button"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_banner_image",
+      "label": "Right Banner Image"
+    }
+  ]
+}
+{% endschema %}

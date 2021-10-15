@@ -42,7 +42,7 @@
             <div class="swiper-wrapper">
               {% for image in product.images %}
               <div class="swiper-slide">
-                <img src="{{ image.src | product_img_url: '512x512', crop: 'center' }}" alt="{{image.alt}}" />
+                <img src="{{ image.src | product_img_url: '512x512', crop: 'center', scale: 3 }}" alt="{{image.alt}}" />
               </div>
     		  {% endfor %}
             </div>
@@ -82,11 +82,12 @@
             <strong> {% if product.metafields.products.accordian_title != blank %}
               {{product.metafields.products.accordian_title}}
               {% else %}
-              25 Servings (850g Total)
+              {% comment %} 25 Servings (850g Total) {% endcomment %}
               {% endif %}</strong>
           </div>
           
-        <h3><span id="additivesIngreditnts">ADDITIVES & INGREDIENTS</span></h3>
+        <!-- <h3 class="additives-title-popup"><span id="additivesIngreditnts">ADDITIVES & INGREDIENTS</span></h3> -->
+        <h3 class="additives-title-popup"><span id="additivesIngreditnts">{% if product.metafields.products.additives_ingredients_title != blank %}{{product.metafields.products.additives_ingredients_title}}{% else %}ADDITIVES & INGREDIENTS{% endif %}</span></h3>
           {%
             render "framework--product--supplements--form",
             product: product,
@@ -124,6 +125,7 @@
 $(document).ready(function(){
  var swiper = new Swiper(".mySwiper", {
    		loop: true,
+      calculateHeight:true,
    		autoplay: {
           delay: 2500,
           disableOnInteraction: false,
