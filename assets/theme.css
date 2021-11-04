@@ -6530,6 +6530,9 @@ body {
   .footer--sub--container {
     margin: 0 auto;
   }
+  .product-form--add-to-cart{
+    position: inherit !important;
+  }
   .product-form--add-to-cart.btn.text-center {
 	position: fixed;
 	bottom: 0;
